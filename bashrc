@@ -80,3 +80,5 @@ function contact () {
 LS_COLORS='di=1;34'
 export LS_COLORS
 
+# Source private bashrc information
+source ~/.dotfiles/bashrc.private
