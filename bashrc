@@ -19,7 +19,7 @@ fi
 if (echo $MOABSERVER | grep -q 'oak')
 then 
     PS1="\[\e[0;94m\](\h)\[\e[01;37m\]:\[\e[01;31m\](\@)\[\e[01;35m\]:\[\e[01;33m\](\w)\[\e[01;37m\]\n\$ \[\e[00m\]"
-    module load python/2.7.1
+    module load python/2.7.8
     module load intel/14.0.0.080
 fi
 PS2="->"
@@ -48,6 +48,7 @@ alias fs="cd /fs/lustre/kschooley"
 alias ls="ls --color=auto"
 alias checkreapy="less ~/var/log/reapy/*/$(date "+\%Y\%m\%d").log"
 alias cat="cat -n"
+alias jobs="jobs -l"
 
 #------------------
 # Custom Functions
@@ -80,4 +81,4 @@ LS_COLORS='di=1;34'
 export LS_COLORS
 
 # Source private bashrc information
-source ~/.dotfiles/bashrc.private
+source ~/dotfiles/bashrc.private
