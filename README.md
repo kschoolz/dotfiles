@@ -5,10 +5,11 @@ Sourced from http://blog.smalleycreative.com/tutorials/using-git-and-github-to-m
 How to quicky import dotfiles to new system:
 
 0. <code> cd ~ </code>
-1. <code> git clone git://github.com/kschoolz/dotfiles.git </code>
+1. <code> git clone http://github.com/kschoolz/dotfiles.git </code>
 2. <code> cd ~/dotfiles </code>
 3. <code> chmod +x makesymlinks.sh </code>
 4. <code> ./makesymlinks.sh </code>
+5. Fix remote url <code> git remote set-url origin git@github.com:kschoolz/dotfiles.git</code>
 
 Update local repo:
 
