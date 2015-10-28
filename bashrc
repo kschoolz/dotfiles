@@ -22,6 +22,10 @@ then
     module load python/2.7.8
     module load intel/14.0.0.080
 fi
+if (echo $host | grep -q 'fish')
+then 
+    PS1="\[\e[0;94m\](\h)\[\e[01;37m\]:\[\e[01;31m\](\@)\[\e[01;35m\]:\[\e[01;33m\](\w)\[\e[01;37m\]\n\$ \[\e[00m\]"
+fi
 PS2="->"
 
 # Prepend local bin to path
