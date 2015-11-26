@@ -10,6 +10,7 @@ How to quicky import dotfiles to new system:
 3. <code> chmod +x makesymlinks.sh </code>
 4. <code> ./makesymlinks.sh </code>
 5. Fix remote url <code> git remote set-url origin git@github.com:kschoolz/dotfiles.git</code>
+6. Copy private configuration settings to system and copy file to <code> ~/dotfiles/.bashrc.private </code>
 
 Update local repo:
 
