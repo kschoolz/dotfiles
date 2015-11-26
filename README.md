@@ -13,7 +13,7 @@ How to quicky import dotfiles to new system:
 
 Update local repo:
 
-0. [[Add SSH key for new system to Github|https://help.github.com/articles/generating-ssh-keys/]]
+0. [Add SSH key for new system to Github](https://help.github.com/articles/generating-ssh-keys/)
 1. <code> git pull origin master </code>
 
 Update github (remote) repo:
