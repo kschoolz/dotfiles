@@ -24,22 +24,34 @@ then
 fi
 PS2="->"
 
+
+#---------------------------------------------------------------------
+# Environment Variables
+#---------------------------------------------------------------------
+
 # Prepend local bin to path
 export PATH=/nfs/12/kschooley/bin:$PATH
+
 # Append location of tq and friends to path 
 export PATH=$PATH:/usr/local/admin/bin
 
+# Emacs? Screw that noise
+export EDITOR=vim
+export VISUAL="$EDITOR"
 
-#module use /nfs/12/kschooley/local/share/modulefiles
+# Make sure LS colors are set for dark/black background
+export LS_COLORS='di=1;34'
 
 # Force bash to check the terminal's row/column size after each command before prompt is displayed
 # Sourced from http://hintsforums.macworld.com/archive/index.php/t-17068.html
 shopt -s checkwinsize
 
-#-------------------
+
+#---------------------------------------------------------------------
 # Aliases
-#--------------------
-alias ssh="ssh -X"
+#---------------------------------------------------------------------
+
+#alias ssh="ssh -X" # Universaly turning on x11 forwarding is a horrible idea... Now I know better.
 alias cj="checkjob"
 alias modules="module list"
 alias bk="cd .."
@@ -49,10 +61,12 @@ alias ls="ls --color=auto"
 alias checkreapy="less ~/var/log/reapy/*/$(date "+\%Y\%m\%d").log"
 alias cat="cat -n"
 alias jobs="jobs -l"
+alias grep="egrep"
 
-#------------------
-# Custom Functions
-#-----------------
+#---------------------------------------------------------------------
+# Functions
+#---------------------------------------------------------------------
+
 function cs () {
     cd "$@" && ls
 }
@@ -68,17 +82,9 @@ function contact () {
     echo "LDAP email:" `ldapemail $1`
 }
 
-## Function to automate cleaning of stray processes from nodes
-#function clean_cluster () {
-#    node_list=$(pdsh -g all reapy -b | awk '{print $1}' | uniq |  sed 's/.$//')
-#    clean_node  $node_list &>> ~/var/log/reapy/clean_cluster/$(date "+\%Y\%m\%d").log
-#}
-
-#------------------
-# ls colors
-#------------------
-LS_COLORS='di=1;34'
-export LS_COLORS
+#---------------------------------------------------------------------
+# Other
+#---------------------------------------------------------------------
 
 # Source private bashrc information
 source ~/dotfiles/bashrc.private

@@ -4,14 +4,12 @@ filetype indent plugin on " filetype detection[ON] plugin[ON] indent[ON]
 set modeline
 set t_Co=256              " enable 256-color mode
 set background=dark
-set smartindent
 set tabstop=4
 set shiftwidth=4
 set shiftround            " always indent/outdent to the nearest tabstop
 set softtabstop=4         " unify w tabstop
 set expandtab
 set number
-filetype plugin on
 " Line length column at 100 char.  Taken from:
 " http://superuser.com/questions/22444/make-vim-display-a-line-at-the-edge-of-the-set-textwidth
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
