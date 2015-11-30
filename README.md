@@ -20,5 +20,6 @@ Update local repo:
 Update github (remote) repo:
 
 1. <code> cd ~/dotfiles </code>
+1.a <code> git pull </code> to merge local repo w/ origin
 2. <code> git commit -m 'Changed vim colorscheme!' </code>
 3. <code> git push origin master </code>
