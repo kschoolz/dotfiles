@@ -1,6 +1,6 @@
 # dotfiles
 
-Sourced from http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/ with minor modifications.
+Sourced from http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/ w/ modifications.
 
 How to quicky import dotfiles to new system:
 
