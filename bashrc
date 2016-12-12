@@ -22,7 +22,7 @@ then
     module load python/2.7.8
     module load intel/14.0.0.080
 fi
-if (echo $HOSTNAME | grep -q -E 'fish|wasteland')
+if (echo $HOSTNAME | grep -q -E 'fish|wasteland|T460')
 then 
     PS1="\[\e[0;94m\](\h)\[\e[01;37m\]:\[\e[01;31m\](\@)\[\e[01;35m\]:\[\e[01;33m\](\w)\[\e[01;37m\]\n\$ \[\e[00m\]"
 fi
@@ -66,6 +66,8 @@ alias checkreapy="less ~/var/log/reapy/*/$(date "+\%Y\%m\%d").log"
 alias cat="cat -n"
 alias jobs="jobs -l"
 alias grep="egrep"
+alias network-restart="sudo systemctl restart NetworkManager"
+alias python="python3"
 
 #---------------------------------------------------------------------
 # Functions
@@ -91,4 +93,7 @@ function contact () {
 #---------------------------------------------------------------------
 
 # Source private bashrc information
-source ~/dotfiles/bashrc.private
+if [ -e ~/dotfiles/bashrc.private ]
+then
+    source ~/dotfiles/bashrc.private
+fi
