@@ -240,8 +240,5 @@ if [[ $? -ne 0 ]]; then
    echo
 fi
 
-export AWS_SECRET_KEY=tWseitEyj6Ba7GdGahUxm0w35sUkzgwWlK7r/0ot
-export AWS_ACCESS_KEY=AKIAJ5H4CHFCWCVUHKCQ
-
 bindkey "^[f" forward-word
 bindkey "^[b" backward-word
