@@ -31,6 +31,9 @@ shopt -s checkwinsize
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+# less is less
+export PAGER=less
+
 #---------------------------------------------------------------------
 # Aliases
 #---------------------------------------------------------------------
