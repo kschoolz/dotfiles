@@ -8,6 +8,8 @@ if (echo $HOSTNAME | grep -iq 'mac')
 then
     # Prompt without username
     PS1="\e[01;36m\](\h)\[\e[01;37m\]:\[\e[01;31m\](\D{%F %T})\[\e[01;35m\]:\[\e[01;33m\](\w)\[\e[01;37m\]\n\$ \[\e[00m\]"
+    # SSH config, from https://bitbucket.org/crosschx/ssh-config
+    alias ssh='cat ~/.ssh/config.d/* > ~/.ssh/config; ssh'
 fi
 if (echo $HOSTNAME | grep -q -E 'fish|wasteland')
 then 
@@ -38,7 +40,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #alias ssh="ssh -X" # Universaly turning on x11 forwarding is a horrible idea... Now I know better.
 alias cj="checkjob"
 alias bk="cd .."
-alias cat="cat -n"
+#alias cat="cat -n"
 alias grep="egrep"
 
 
