@@ -9,7 +9,7 @@ set shiftwidth=4
 set shiftround            " always indent/outdent to the nearest tabstop
 set softtabstop=4         " unify w tabstop
 set expandtab
-set number
+set relativenumber
 " Line length column at 100 char.  Taken from:
 " http://superuser.com/questions/22444/make-vim-display-a-line-at-the-edge-of-the-set-textwidth
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -18,4 +18,3 @@ set nohlsearch              " Don't continue to highlight searched phases.
 set incsearch               " But do highlight as you type your search.
 set ignorecase              " Make searches case-insensitive.
 set nowrap                  " Don't wrap text
-
