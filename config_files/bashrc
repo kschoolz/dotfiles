@@ -11,7 +11,7 @@ then
     # SSH config, from https://bitbucket.org/crosschx/ssh-config
     alias ssh='cat ~/.ssh/config.d/* > ~/.ssh/config; ssh'
 fi
-if (echo $HOSTNAME | grep -q -E 'fish|wasteland')
+if (echo $HOSTNAME | grep -q -E 'fish|wasteland|T460')
 then 
     PS1="\[\e[0;94m\](\h)\[\e[01;37m\]:\[\e[01;31m\](\@)\[\e[01;35m\]:\[\e[01;33m\](\w)\[\e[01;37m\]\n\$ \[\e[00m\]"
 fi
@@ -33,6 +33,9 @@ shopt -s checkwinsize
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+# less is less
+export PAGER=less
+
 #---------------------------------------------------------------------
 # Aliases
 #---------------------------------------------------------------------
@@ -42,6 +45,8 @@ alias cj="checkjob"
 alias bk="cd .."
 #alias cat="cat -n"
 alias grep="egrep"
+alias network-restart="sudo systemctl restart NetworkManager"
+alias python="python3"
 
 
 #---------------------------------------------------------------------
@@ -54,3 +59,4 @@ alias grep="egrep"
 
 # Source private bashrc information
 source ~/dotfiles/bashrc.private 2>/dev/null
+alias ls='ls --color=auto'
