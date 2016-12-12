@@ -6,7 +6,7 @@ Clone to new computer:
 
 0. Ensure SSH key on computer is added to git (add something like ~/.ssh/id_rsa.pub to git's SSH key list)
 1. <code> cd </code>
-2. <code> git@github.com:kschoolz/dotfiles.git </code>
+2. <code> git clone git@github.com:kschoolz/dotfiles.git </code>
 
 Update local repo:
 
