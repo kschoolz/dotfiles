@@ -23,4 +23,4 @@ Update github (remote) repo:
 1. <code> git pull </code> to merge local repo w/ origin
 2. <code> git add </code> $file to add your files.
 2. <code> git commit -m 'Changed vim colorscheme!' </code>
-3. <code> git push origin master </code>
+3. <code> git push </code>
